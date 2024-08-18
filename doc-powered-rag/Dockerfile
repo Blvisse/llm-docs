@@ -4,4 +4,6 @@ RUN mkdir doc-powered-rag
 WORKDIR doc-powered-rag
 COPY . .
 
+
 RUN python3 -m pip install -r requirements.txt
+RUN python3  -m pytest
