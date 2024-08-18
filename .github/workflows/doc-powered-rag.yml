@@ -1,0 +1,17 @@
+name: Doc powered RAG workflow
+
+on:
+  pull_request :
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking branch
+        uses: actions/checkout@v2
+
+
+
