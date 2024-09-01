@@ -16,6 +16,11 @@ jobs:
   runnning-tests:
     runs-on: ubuntu-latest
     steps:
+      - name: List all files in the root directory
+        run: |
+          echo "Files in the root directory:"
+            ls -al
+        shell: bash
       - name : Running-python tests
         shell : bash
         run: |
