@@ -13,5 +13,14 @@ jobs:
       - name: checking branch
         uses: actions/checkout@v2
 
+  runnning-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Running-python tests
+        shell : bash
+        run: |
+          ./cli.sh
+          
+    
 
 
