@@ -1,0 +1,27 @@
+name: Doc powered RAG workflow pull request
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'doc-powered-rag/**'
+      - '.github/workflows/doc-powered-rag*.yml'
+jobs:
+  check-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking branch
+        uses: actions/checkout@v2
+
+  runnning-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Running-python tests
+        shell : bash
+        working-directory: doc-powered-rag
+        run: |
+          ./cli.sh
+          
+    
+
+
