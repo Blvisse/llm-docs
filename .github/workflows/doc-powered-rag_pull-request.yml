@@ -7,31 +7,16 @@ on:
       - 'doc-powered-rag/**'
       - '.github/workflows/doc-powered-rag*.yml'
 jobs:
-  check-branch:
+  runnning-tests:
     runs-on: ubuntu-latest
     steps:
       - name: checking branch
         uses: actions/checkout@v2
 
-      - name: List all files in the root directory
-        run: |
-          echo "Files in the root directory:"
-            ls -al
-        shell: bash
-
-  runnning-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: List all files in the root directory
-        run: |
-          echo "Files in the root directory:"
-            ls -al
-        shell: bash
       - name : Running-python tests
         shell: bash
+        working-directory: doc-powered-rag
         run: |
-          ls
-          cd doc-powered-rag
           ./cli.sh
         
           
