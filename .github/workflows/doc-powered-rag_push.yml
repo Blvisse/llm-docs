@@ -18,8 +18,9 @@ jobs:
     steps:
       - name : Running-python tests
         shell : bash
-        working-directory: doc-powered-rag
         run: |
+          ls
+          cd doc-powered-rag
           ./cli.sh
           
     

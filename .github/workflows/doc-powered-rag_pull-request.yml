@@ -17,10 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name : Running-python tests
-        shell : bash
-        working-directory: doc-powered-rag
+        shell: bash
         run: |
+          ls
+          cd doc-powered-rag
           ./cli.sh
+        
           
     
 
