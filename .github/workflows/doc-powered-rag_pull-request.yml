@@ -13,6 +13,12 @@ jobs:
       - name: checking branch
         uses: actions/checkout@v2
 
+      - name: List all files in the root directory
+        run: |
+          echo "Files in the root directory:"
+            ls -al
+        shell: bash
+
   runnning-tests:
     runs-on: ubuntu-latest
     steps:
