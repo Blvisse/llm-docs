@@ -6,4 +6,9 @@ COPY . .
 
 
 RUN python3 -m pip install -r requirements.txt
-RUN python3  -m pytest
+
+RUN chmod +x cli.sh
+RUN chmod +x start.sh
+
+
+CMD ["/doc-powered-rag/start.sh"]
